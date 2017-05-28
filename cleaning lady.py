@@ -54,7 +54,7 @@ def clear():
     system('rm -rf com.meitu.pomelo')
     system('rm -rf com.google.android.youtube')
     system('rm -rf com.google.android.music')
-    system('rm -rf com.google.android.apps.maps')
+    #system('rm -rf com.google.android.apps.maps')
     system('rm -rf com.facebook.katana')
     system('rm -rf com.google.android.gms')
     system('rm -rf com.android.vending')
