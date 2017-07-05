@@ -62,7 +62,8 @@ def clear():
     chdir('/storage/emulated/0/')
     system('rm -rf Facebook\ Messenger')
     system('rm -rf .face')
-
+    chdir('/storage/emulated/0/WhatsApp/.Shared')
+    system('rm -rf *.tmp')
 def seg():  
     try:
         chdir('/data/tombstones')
@@ -99,5 +100,4 @@ elif st == 'N' or 'n':
     impr()
 else:
     print('\n[!] Nenhuma Das Opcoes e valida.!')
-    pass
-    
+pass
