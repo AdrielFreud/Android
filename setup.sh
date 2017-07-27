@@ -40,7 +40,7 @@ echo " [4] Unzip"
 echo " [5] Tar"
 echo " [6] Localizar Hexadecimal"
 echo " [7] Rede"
-echo " [8] Md5sum encrypt"
+echo " [8] sha512sum encrypt"
 echo " [9] wget"
 echo " [10]"
 echo ""
@@ -53,6 +53,7 @@ case $tool in
 	busybox pscan -cb $ip | grep open
 	echo ""
 	echo "[+] Scan Finalizado !"
+	busybox sh setup.sh
 	;;
 	"2")
 	read -p "Deseja se conectar? ou iniciar o modo LISTEN  |  [1] for connect [2] for LISTEN: " net
@@ -63,12 +64,16 @@ case $tool in
   	read -p "Port: " p
   	busybox nc $h $p
     echo "############################"
-  	;;
+    sleep 2
+    busybox sh setup.sh
+    ;;
   	"2")
     echo "############################"
   	read -p "Your Port: " out
   	busybox nc -lp $out
     echo "############################"
+    sleep 2
+  	busybox sh setup.sh
   	;;
   	esac
 	;;
@@ -78,22 +83,30 @@ case $tool in
   read -p "Host: " remoteHost
   busybox whois $remoteHost
   echo "############################"
+  sleep 2
+  busybox sh setup.sh
   ;;
   "4")
   read -p "File to unzip: " file
   busybox unzip $file
+  sleep 2
+  busybox sh setup.sh
   ;;
   "5")
   echo "Exemple; Parameters and File: -vzxf arquivo.tar.gz for -vxjpf arq.tar.bz2"
   echo ""
   read -p "Parameters and File: " parametros
   busybox tar $parametros
+  sleep 2
+  busybox sh setup.sh
   ;;
   "6")
   echo "############################"
   read -p "Text: " texto
   echo $texto | busybox hd
   echo "############################"
+  sleep 2
+  busybox sh setup.sh
   ;;
   "7")
   echo "############################"
@@ -110,6 +123,8 @@ case $tool in
 	 	 ifconfig wlan0 up
 	 	 ;;
 	 	 esac
+	  sleep 2
+  	busybox sh setup.sh
 	  ;;
 		"2")
     echo "############################"
@@ -119,15 +134,19 @@ case $tool in
 	  echo ""
 		busybox iproute
 		echo "############################"
+		sleep 2
+  	busybox sh setup.sh
 		;;
 		esac
   ;;
   "8")
   echo "############################"
   read -p "Text: " text
-  echo $text | busybox md5sum
+  echo $text | busybox sha512sum
   echo ""
   echo "############################"
+  sleep 2
+  busybox sh setup.sh
   ;;
   "9")
   echo "############################"
@@ -136,6 +155,8 @@ case $tool in
   busybox wget $url
   echo ""
   echo "############################"
+  sleep 2
+  busybox sh setup.sh
   ;;
 	esac
 ;;
@@ -152,8 +173,11 @@ echo """
 ##############################################
 """
 echo""
+sleep 2
+busybox sh setup.sh
 ;;
 "3")
 exit
 ;;
 esac
+
