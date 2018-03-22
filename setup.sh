@@ -110,7 +110,7 @@ case $tool in
   "7")
   echo "############################"
   echo ""
-  read -p "[2] Deseja listar as configuraçoes de rede or tentar um toubleshooting [1]: " var
+  read -p "[1] - Toubleshooting. [2] - Listar. | Deseja listar as configuraçoes de rede or tentar um toubleshooting: " var
   case $var in
   	"1")
   	read -p "[1] for down [2] for UP: " dec
