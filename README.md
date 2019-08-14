@@ -1,7 +1,7 @@
 ## AdrielFreud
 
 ![](https://img.shields.io/badge/PythoNux-v1.0-blue?style=flat&logo=appveyor)
-![](https://img.shields.io/badge/plataforma-linux64--linux32--Androidblue?style=flat&logo=appveyor)
+![](https://img.shields.io/badge/plataforma-linux64--linux32--Android-blue?style=flat&logo=appveyor)
 ![](https://img.shields.io/badge/bash-blue)
 
  - Scripting Android @
