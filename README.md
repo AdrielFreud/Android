@@ -7,7 +7,7 @@
  - Scripting Android @
 
 ## AVISO
-- Caso você encontrar um bug [Click-aqui](https://github.com/AdrielFreud/Android/issues/new) e crie um issue para eu corrijir o bug.
+- Caso você encontrar um bug [Click-aqui](https://github.com/AdrielFreud/Android/issues/new) crie um issue para eu corrigi-lo.
 
 ## Imagem
 ![photo]()
@@ -17,7 +17,7 @@
   - É OpenSource.
   - Realize uma Analise através do Seu Dispositivo.
  
- ## Dowloand
+ ## Download
 Baixe diretamente do github com:
  - git clone https://github.com/AdrielFreud/Android.git
  - ou https://github.com/AdrielFreud/Android/archive/master.zip
